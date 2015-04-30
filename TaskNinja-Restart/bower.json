@@ -1,0 +1,22 @@
+{
+  "name": "TaskNinja-Restart",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Tomiblanchard/Code4Startup.Ninja",
+  "authors": [
+    "Tomiblanchard <tomiblanchard@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.15",
+    "angular-resource": "~1.3.15"
+  }
+}
