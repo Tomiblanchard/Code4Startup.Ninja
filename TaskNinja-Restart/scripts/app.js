@@ -5,16 +5,18 @@ var app = angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
+    'ngToast',
+    'ngMoment',
     'firebase'
   ])
   .constant('FURL', 'https://task-ninja1994.firebaseio.com/')
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider){
     $routeProvider
       .when('/', {
         templateUrl: 'views/browse.html',
         controller: 'TaskController'
       })
-      .when('/post', {
+      .when('/post', }{
         templateUrl: 'views/post.html',
         controller: 'TaskController'
       })

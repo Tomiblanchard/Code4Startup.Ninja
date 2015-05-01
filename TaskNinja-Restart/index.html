@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="no-js" ng-app="TaskNinjaApp">
+  <head>
+    <meta charset="utf-8">
+    <title>TaskNinja Restart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/css/material.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/css/ripples.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angularjs-toaster/toaster.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/ripples.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $.material.init();
+      });
+    </script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/task.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div ng-view=""></div>
+    </div>
+  </body>
+</html>

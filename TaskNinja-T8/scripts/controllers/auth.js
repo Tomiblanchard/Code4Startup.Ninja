@@ -4,7 +4,7 @@ app.controller('AuthController', function($scope, $location, toaster, Auth) {
     $location.path('/');
   }
 
-	$scope.register = function(user) {          
+	$scope.register = function(user) {
     Auth.register(user)
       .then(function() {
         toaster.pop('success', "Registered successfully");
@@ -19,15 +19,15 @@ app.controller('AuthController', function($scope, $location, toaster, Auth) {
       .then(function() {
         toaster.pop('success', "Logged in successfully");
         $location.path('/dashboard');
-      }, function(err) {        
+      }, function(err) {
         errMessage(err);
-      });    
+      });
 	};
 
 	$scope.changePassword = function(user) {
      Auth.changePassword(email, oldPass, newPass)
-      .then(function() {                        
-        
+      .then(function() {
+
         // Reset form
         $scope.email = '';
         $scope.oldPass = '';
@@ -35,7 +35,7 @@ app.controller('AuthController', function($scope, $location, toaster, Auth) {
 
         toaster.pop('success', "Password changed successfully");
       }, function(err) {
-        errMessage(err);      
+        errMessage(err);
       });
   };
 
@@ -45,18 +45,18 @@ app.controller('AuthController', function($scope, $location, toaster, Auth) {
 
     if(err && err.code) {
       switch (err.code) {
-        case "EMAIL_TAKEN": 
-          msg = "This email has been taken"; break;          
-        case "INVALID_EMAIL": 
-          msg = "Invalid email"; break;          
-        case "NETWORK_ERROR": 
-          msg = "Network error"; break;          
-        case "INVALID_PASSWORD": 
-          msg = "Invalid password"; break;          
+        case "EMAIL_TAKEN":
+          msg = "This email has been taken"; break;
+        case "INVALID_EMAIL":
+          msg = "Invalid email"; break;
+        case "NETWORK_ERROR":
+          msg = "Network error"; break;
+        case "INVALID_PASSWORD":
+          msg = "Invalid password"; break;
         case "INVALID_USER":
-          msg = "Invalid user"; break;                  
-      } 
-    }   
+          msg = "Invalid user"; break;
+      }
+    }
 
     toaster.pop('error', msg);
   };

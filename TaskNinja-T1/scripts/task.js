@@ -7,7 +7,7 @@ app.controller('TaskController', function($scope, $firebase, FURL, $location, $r
 	var taskId = $routeParams.taskId;
 
 	$scope.tasks = fbTasks;
-	
+
 	if(taskId) {
 		$scope.selectedTask = getTask(taskId);
 	}
@@ -19,7 +19,7 @@ app.controller('TaskController', function($scope, $firebase, FURL, $location, $r
 	$scope.postTask = function(task) {
 		$scope.tasks.$add(task);
 		$location.path('/');
-	};	
+	};
 
 	$scope.updateTask = function(task) {
 		$scope.selectedTask.$save(task);
